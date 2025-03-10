@@ -1,0 +1,513 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+/*header*/
+header{
+    display: flex;
+    justify-content:space-between;
+    padding: 25px 4%;
+    background-color: #fff;
+    position: fixed;
+    left:0px;
+    right:0px;
+    top:0px;
+    box-shadow: 0px 5px 2px rgb(244, 244, 244);
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(166, 99, 4);
+    font-weight:900;
+}
+.Tpanier i{
+    color: rgb(166, 99, 4);
+    cursor: pointer;
+    position: relative;
+}
+.Tpanier span{
+    color:red;
+    font-weight: bolder;
+    font-size: 18px;
+    position:relative;
+    top: -8px;
+    right: 14px;
+    visibility: hidden;
+    cursor: pointer;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(166, 99, 4);
+    transition: 0.3s ease;
+}
+#fermer{
+    display: none;
+}
+/*index*/
+#partie1I{
+        background-image: url("./meme1/partie1I.webp");
+        height: 50vh;
+        background-size: cover;
+
+}
+.section_produit .INFO{
+    font-size: 50px;
+    color:  rgb(166, 99, 4);
+    text-transform: uppercase;
+}
+/*parti2*/
+.partie2{
+    padding-top:0px;
+    padding-bottom: 20px;
+    padding-left: 9%;
+    padding-right: 9%;
+ }
+ .partie2 .image{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding-top: 40px;
+ 
+ }
+ .partie2 .image div{
+     background-color:  rgb(208, 212, 216);
+     text-align: center;
+     border-radius: 15px;
+    
+ }
+ .partie2 .image div:hover{
+     scale: 0.9;
+ }
+ .partie2 .image .produit{
+     padding:30px;
+     border:1px solid #879796;
+     box-shadow: 20px 20px 15Ppx rgb(41, 41, 41);
+     margin: 5px;
+ }
+ .partie2 .image .produit img{
+     height: 110px;
+     width: 100%;
+ }
+ .partie2 button{
+     width: 90px;
+     padding:10px;
+     background-color : rgb(166, 99, 4);
+     border: none;
+     border-radius: 10px;
+     color: white;
+     cursor: pointer;
+     font-weight: bold;
+ }
+ .partie2 button:hover{
+     background-color: white;
+     color: rgb(166, 99, 4) ;
+     font-weight: bold;
+ }
+ .partie2 h1{
+     text-align: center;
+     color: #000 ;
+     font-weight: bold;
+     font-size: 25px;
+     text-transform:initial;
+ }
+/*produit*/
+.section_produit{
+    margin-top: 1vh;
+    padding: 15px 8%;
+}
+.section_produit h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+}
+.conteneur{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.cartProduit{
+    padding: 20px;
+    background-color: rgb(208, 212, 216);
+    border-radius: 10px;
+}
+.imageProduit{
+    width: 210px;
+}
+.imageProduit img{
+    width: 100%;
+    border-radius: 10px;
+}
+.imageProduit img:hover{
+    scale: 1.02;
+
+}
+.cartProduit .nom{
+    font-weight: 900;
+    font-size: 20px;
+}
+.prix_panier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.prix_panier .panier{
+    color: #fff;
+    background-color:rgb(166, 99, 4);
+    padding: 5px;
+    cursor: pointer;
+}
+.prix_panier .prix{
+    color: rgb(166, 99, 4);
+    font-weight: bold;
+}
+/*Lepanier*/
+.Lepanier{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 270px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0px 10px  rgb(244, 244, 244) ;
+    padding: 6px 20px 40px;
+    z-index: 100;
+    overflow: auto;
+    transition: 0.6s;
+}
+.Lepanier.active{
+    right: 0px;
+}
+.Lepanier .titre{
+    text-align: center;
+    font-size: 35px;
+}
+.cartPanier{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.cartPanier img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+.detailProduit{
+    display: grid;
+    gap: 8px;
+    margin-right: auto;
+    align-items: center;
+}
+.titrePanier{
+    font-size: 10 px;
+    line-height: 0;
+}
+.prixPanier{
+  font-weight: bold;
+}
+.quantityPanier{
+    display: flex;
+    width: 100px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    justify-content: space-around;
+    padding: 2px;
+}
+.quantityPanier button{
+    background-color: transparent;
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+.quantityPanier #reduit{
+    color: #999;
+}
+.quantityPanier .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    cursor: default;
+}
+.supprimer{
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(166, 99, 4);
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 1px solid #333;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.totalPrix{
+    margin-left: 10px;
+    font-weight: 900;
+}
+.commander{
+    display: block;
+    padding: 10px 30px;
+    background-color: rgb(166, 99, 4);
+    font-weight: 800;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #fff;
+    margin: 20px auto 0;
+    cursor: pointer;
+    border: none;
+}
+.fermer{
+    position: absolute;
+    top: 20px;
+    right: 17px;
+    font-size: 35px;
+    cursor: pointer;
+}
+/*navigation*/
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+.navigation a{
+    padding: 10px;
+    margin: 3px;
+    color: white;
+    background-color: rgb(166, 99, 4);
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    width:25px;
+    border-radius: 5px;
+}
+/*partie 1*/
+.partie1{
+    padding-bottom: 20px;
+    background-image: url("./meme1/p2.avif");
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    background-position: 100%;
+}
+/*blog*/
+.blog{
+    background-color: #fff;
+    padding-left:150px;
+    padding-right:150px;
+    padding-top:120px;
+    padding-bottom: 15px;
+}
+.blog .Bconteneur{
+    display:flex;
+    margin-bottom: 20px;
+   justify-content: space-between;
+}
+.blog .Bconteneur h1{
+    color: grey;
+    position: absolute;
+    top:70px;
+    left: 330px;
+    /*z-index: ; METTRE UNEPARTIE D'UN ELEMENT SOUS UN AUTRE ELEMENT */
+}
+.blog .Bconteneur #Bimage{
+    width:50%;
+    margin-right: 50px;
+}
+.blog .Bconteneur .Bexplic{
+    width: 50%;
+}
+#img{
+    width: 100%;
+    height: 230px;
+    object-fit: initial;
+}
+.Bexplic h4{
+    text-align: center;
+}
+.Bexplic p{
+    line-height: 30px;
+}
+.Bexplic a{
+    text-decoration:none;
+    font-size: 25px;
+    color: black;
+    font-weight: 500;
+}
+/*creation d'un contenu vide apres le "a" */
+.Bexplic a::after{
+    content: " ";
+    width: 60px;
+    height: 1px;
+    background-color: black;
+    position:relative;
+    top: 0px;
+    right:0px;
+    cursor: pointer;
+}
+.Bexplic a:hover::after{
+    background-color: rgb(166, 99, 4);
+}
+.Bexplic a:hover{
+    color: rgb(166, 99, 4);
+    font-weight: 500;
+}
+
+/*contact*/
+.form{
+    width: 65%;
+}
+.form h2{
+    text-align: center;
+    font-size: 25px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+form input,form textarea{
+    margin-bottom: 10px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid #e4e3e3;
+}
+form button{
+    padding: 10px;
+    border: none;
+    color: #fff;
+    background-color: rgb(166, 99, 4);
+    font-weight: bold;
+    width: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.localise{
+    display: flex;
+    justify-content:space-between;
+    padding: 15px;
+}
+#sms{
+    width: 40%;
+    margin-top: 80px;
+}
+#sms li{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#sms li i{
+    color:  rgb(166, 99, 4);
+}
+#sms h3{
+    font-size: 25px;
+    text-align: center;
+    color:  rgb(166, 99, 4);
+    font-weight: bold;
+}
+.map{
+    width: 60%;
+}
+.map iframe{
+    width: 100%;
+}
+.membre{
+    margin-top: 10px;
+}
+.membre img{
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    padding-left:10px;
+}
+.perso{
+    display: flex;
+    gap:0px;
+    align-items: center;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+.perso ul li{
+    list-style: none;
+}
+#contact{
+    display: flex;
+    padding: 20px;
+}
+.form h2{
+    font-size: 40px;
+    text-align: center;
+    color:  rgb(166, 99, 4);
+    font-weight: bold;
+
+}
+
+/*footer*/
+footer{
+    display: flex;
+    background-color:  rgb(240, 240, 243);
+    padding-top: 40px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+footer table tr td{
+    padding: 5px;
+    text-align: center;
+}
+footer table tr td a{
+    text-decoration: none;
+    color: rgb(166, 99, 4);
+    font-weight: bold;
+}
+footer .milieu{
+    padding-top: 30px;
+    color:rgb(166, 99, 4) ;
+    font-weight: bold;
+}
+footer td{
+    color: rgb(166, 99, 4);
+    font-weight: bold;
+}
+.logo{
+    text-decoration: none;
+    padding:5px;
+    color: rgb(166, 99, 4);
+    font-weight: bold;
+    border: 2px solid  rgb(166, 99, 4);
+}
+form .error{
+    font-size: 0.8rem;
+    color: red;
+    display:block;
+}
+button:disabled{
+    background-color: #879796;
+    cursor: not-allowed;
+}

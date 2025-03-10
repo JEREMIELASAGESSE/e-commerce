@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connexion</title>
+    <!--link rel="stylesheet" href="../asset/css/main.css"-->
+<!-- font awesone.com pour prendre la tag pour les icones dans la zone de saisi-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./authentification.css">
+</head>
+<body>
+    <div id="app">
+        
+        <form action=""  method="post" id="login">
+            <h2>connexion</h2>
+            <div class="form-row" >
+                <input type="email" id="email" class="flex-1_" name="email" autocomplete="on" placeholder="votre adresse mail" pattern="/^[a-z0-9_-]+[@][a-z]{2,6}$/">
+            </div>
+            <div class="error" id="error-email"></div>
+            <div class="form-row">
+                <input type="password" id="password" class="flex-1_"  autocomplete="on" name="password" placeholder="votre mot de passe">
+            </div>
+            <div class="error" id="error-password"></div>
+            <div class="error" id="error-connection"></div>
+            <div class="form-row">
+                <button class="submit" disabled="true" id="valider">Se connecter</button>
+            </div>
+            <div class="form-row">
+                <p class="info">
+                    si vous n'avez pas un compte <a href="inscription.html">cliquez ici </a>pour creer votre compte
+                </p>
+            </div>
+        </form>
+    </div>
+     <!-- AFFICHER UN MESSAGE SI JS N'EST PAS ACTIVE SUR SA MACHINE -->
+     <noscript>javascript n'est pas activé sur votre ordinateur. merci de l'activer dans les parametres de vorte navigateur.</noscript>
+    <script src="conection.js"></script>
+</body>
+</html>
