@@ -12,12 +12,12 @@
 <body>
     <div id="app">
         
-        <form action="test.html" method="post" id="register">
+        <form action="inscription.php" method="post" id="register">
             <a href="#" class="logo" >SHAMMA UNIVERS</a>
             <h2>inscription</h2>
             <div class="form-row1">
-                <input type="text" class="flex-2_" name="nom" autocomplete="on" placeholder="votre nom" pattern="/^[a-zA-Z'é ]{2,15}$/">
-                <input type="text" class="flex-2_" name="prenom" autocomplete="on" placeholder="votre prenom" pattern="/^[a-zA-Z'é ]{3,30}$/">
+                <input type="text" class="flex-2_" name="nom" autocomplete="on" placeholder="votre nom" >
+                <input type="text" class="flex-2_" name="prenom" autocomplete="on" placeholder="votre prenom">
             </div>
             <div class="sms"><div class="error" id="error-nom"></div><div class="error" id="error-prenom"></div></div>
             
@@ -26,21 +26,20 @@
             </div>
             <div class="error" id="error-tel"></div>
             <div class="form-row" >
-                <input type="email" class="flex-1_" name="email" autocomplete="on" placeholder="votre adresse mail" pattern="/^[a-z0-9_-]+[@][a-z]{2,6}$/">
+                <input type="email" class="flex-1_" name="email" autocomplete="on" placeholder="votre adresse mail">
             </div>
             <div class="error" id="error-email"></div>
             <div class="form-row">
-                <input type="password" class="flex-1_" autocomplete="on" name="password" placeholder="votre mot de passe" pattern="/^[a-zA-Z0-9_-éà%µ']{8,20}$/">
+                <input type="password" class="flex-1_" autocomplete="on" name="password" placeholder="votre mot de passe">
                 
             </div>
             <div class="error" id="error-password"></div>
             <div class="form-row">
-                <input type="password" class="flex-1_" name="confirm_password" autocomplete="on" placeholder="confirmation du mot de passe" pattern="/^[a-zA-Z0-9_-éà%µ']{8,20}$/">
-               
+                <input type="password" class="flex-1_" name="confirm_password" autocomplete="on" placeholder="confirmation du mot de passe">
             </div>
             <div class="error" id="erro-password_comfirm"></div>
             <div class="form-row">
-                <button class="submit" disabled="true" id="Envoyer">S'INSCRIRE</button>
+                <button class="submit" id="Envoyer">S'INSCRIRE</button>
             </div>
             <div class="form-row">
                 <p class="info">

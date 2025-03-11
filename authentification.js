@@ -96,6 +96,8 @@ function contraintConfirm(ev) {
 }
 
 function validateForm() {
+    Envoyer.disabled="true"
+    
     const nomValid = !document.getElementById('error-nom').innerHTML;
     const prenomValid = !document.getElementById('error-prenom').innerHTML;
     const telValid = !document.getElementById('error-tel').innerHTML;
@@ -103,6 +105,7 @@ function validateForm() {
     const passwordValid = !document.getElementById('error-password').innerHTML;
     const confirmPasswordValid = !document.getElementById('erro-password_comfirm').innerHTML;
     Envoyer.disabled = !(nomValid && prenomValid && telValid && emailValid && passwordValid && confirmPasswordValid);
+
 }
 
 Nom.addEventListener('keyup', contrainteNom);
@@ -111,5 +114,4 @@ tel.addEventListener('keyup', contraintetel);
 Imail.addEventListener('keyup', contraintEmail);
 password.addEventListener('keyup', contraintePassword);
 passwordConfirm.addEventListener('keyup', contraintConfirm);
-
 validateForm(); // Initial validation
