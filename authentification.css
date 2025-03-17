@@ -61,6 +61,10 @@ input{
     form{
         width: 80%;
     }
+    form {
+        position: absolute;
+        top: 28%;
+    }
     
 }
 .submit,.form-row{

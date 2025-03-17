@@ -1,3 +1,21 @@
+//menu
+let navbar=document.getElementById("navbar")//acces à la nabar
+let menu =document.getElementById("menu")//acces au menu
+let fermerMenu=document.querySelector('.fermerMenu')//acces fermeture
+if (menu) {
+    menu.addEventListener("click",()=>{
+        navbar.classList.add('active')
+    })
+}
+if (fermerMenu) {
+    fermerMenu.addEventListener("click",()=>{
+        navbar.classList.remove('active')
+    })
+}
+
+
+
+//LE PANNIER
 let fermer=document.querySelector(".fermer")
 let Lepanier=document.querySelector(".Lepanier")
 let Tpanier=document.querySelector(".Tpanier")
