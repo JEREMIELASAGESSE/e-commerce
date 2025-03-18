@@ -514,7 +514,7 @@ button:disabled{
     display: none;
 }
 .fermerMenu{
-    color:  rgb(166, 99, 4);
+    color:rgb(166, 99, 4);
     position: relative;
     top: 7px;
     left: -20px;
@@ -522,7 +522,7 @@ button:disabled{
     display:none;
 }
 /*responsivité*/
-@media (max-width:799px) {
+@media screen and (max-width:799px) {
     #menu{
         display: block;
     }
